@@ -1,0 +1,93 @@
+/* --- Estilo base do login e registro --- */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle at top, #1a1a1a, #0e0e0e);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Caixa de login */
+.login-container {
+    background-color: rgba(25, 25, 25, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(255, 68, 68, 0.25);
+    width: 350px;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Efeito de vidro */
+.glass {
+    background: rgba(30, 30, 30, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+    color: #ff4444;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.login-container input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: #222;
+    color: #eee;
+    transition: 0.3s;
+}
+
+.login-container input:focus {
+    box-shadow: 0 0 6px #ff4444;
+}
+
+.login-container button {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.login-container button:hover {
+    background-color: #ff6666;
+    transform: scale(1.03);
+}
+
+.erro {
+    color: #ff8080;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.link {
+    margin-top: 15px;
+    color: #aaa;
+}
+
+.link a {
+    color: #ff4444;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

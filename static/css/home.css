@@ -1,0 +1,487 @@
+/* --- TEMAS DE CORES --- */
+.tema-vermelho {
+    --cor-primaria: #ff4444;
+    --cor-secundaria: #ff6666;
+}
+
+.tema-azul {
+    --cor-primaria: #448aff;
+    --cor-secundaria: #77aaff;
+}
+
+.tema-verde {
+    --cor-primaria: #44ff88;
+    --cor-secundaria: #66ffaa;
+}
+.tema-rosa {
+    --cor-primaria: #ff44e6;
+    --cor-secundaria: #ff66d9;
+}
+
+
+/* --- ESTILO GERAL DO SITE --- */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #111;
+    color: #eee;
+    line-height: 1.6;
+}
+
+
+
+
+
+/* --- HEADER --- */
+header {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+header h1 {
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+/* --- MENU --- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #eee;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+nav ul li a:hover {
+    color: var(--cor-primaria);
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+main {
+    flex: 1;
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+main h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+main p {
+    color: #ccc;
+    max-width: 700px;
+    margin: 10px auto 30px;
+}
+
+/* --- BOTÕES E LINKS --- */
+a.btn, button, .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+a.btn:hover, button:hover, .btn:hover {
+    background-color: var(--cor-secundaria);
+    transform: scale(1.05);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #1c1c1c;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    color: #999;
+}
+
+/* --- ANIMAÇÃO --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* --- TEMAS DE CORES --- */
+.tema-vermelho {
+    --cor-primaria: #ff4444;
+    --cor-secundaria: #ff6666;
+}
+
+.tema-azul {
+    --cor-primaria: #448aff;
+    --cor-secundaria: #77aaff;
+}
+
+.tema-verde {
+    --cor-primaria: #44ff88;
+    --cor-secundaria: #66ffaa;
+}
+.tema-rosa {
+    --cor-primaria: #ff44e6;
+    --cor-secundaria: #ff66d9;
+}
+
+
+/* --- ESTILO GERAL DO SITE --- */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #111;
+    color: #eee;
+    line-height: 1.6;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+header h1 {
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+/* --- MENU --- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #eee;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+nav ul li a:hover {
+    color: var(--cor-primaria);
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+main {
+    flex: 1;
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+main h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+main p {
+    color: #ccc;
+    max-width: 700px;
+    margin: 10px auto 30px;
+}
+
+/* --- BOTÕES E LINKS --- */
+a.btn, button, .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+a.btn:hover, button:hover, .btn:hover {
+    background-color: var(--cor-secundaria);
+    transform: scale(1.05);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #1c1c1c;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    color: #999;
+}
+
+/* --- ANIMAÇÃO --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* --- TEMAS DE CORES --- */
+.tema-vermelho {
+    --cor-primaria: #ff4444;
+    --cor-secundaria: #ff6666;
+}
+
+.tema-azul {
+    --cor-primaria: #448aff;
+    --cor-secundaria: #77aaff;
+}
+
+.tema-verde {
+    --cor-primaria: #44ff88;
+    --cor-secundaria: #66ffaa;
+}
+
+.tema-rosa {
+    --cor-primaria: #ff44e6;
+    --cor-secundaria: #ff66d9;
+}
+
+
+
+/* --- ESTILO GERAL DO SITE --- */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #111;
+    color: #eee;
+    line-height: 1.6;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+header h1 {
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+/* --- MENU --- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #eee;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+nav ul li a:hover {
+    color: var(--cor-primaria);
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+main {
+    flex: 1;
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+main h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+main p {
+    color: #ccc;
+    max-width: 700px;
+    margin: 10px auto 30px;
+}
+
+/* --- BOTÕES E LINKS --- */
+a.btn, button, .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+a.btn:hover, button:hover, .btn:hover {
+    background-color: var(--cor-secundaria);
+    transform: scale(1.05);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #1c1c1c;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    color: #999;
+}
+
+/* --- ANIMAÇÃO --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- HEADER GERAL --- */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+}
+
+/* Centraliza o título no topo */
+.site-title {
+    color: var(--cor-primaria);
+    margin: 0;
+    font-size: 28px;
+    text-align: center;
+}
+
+/* Área inferior do header: menu + usuário */
+.header-content {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* --- MENU --- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: #eee;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+nav ul li a:hover {
+    color: var(--cor-primaria);
+}
+
+/* --- USUÁRIO NO CANTO DIREITO --- */
+.header-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--cor-primaria);
+    transition: 0.3s;
+}
+
+.header-avatar:hover {
+    transform: scale(1.05);
+}
+
+.username {
+    font-weight: bold;
+    color: var(--cor-primaria);
+    font-size: 1rem;
+}
+
+
+.link-imagem {
+    display: inline-block; /* link só ocupa o tamanho da imagem */
+}
+
+.conteudo-img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.imagem-legenda {
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+}
+
+textarea.anotacoes {
+    width: 100%;
+    min-height: 400px;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical; /* permite aumentar/diminuir altura */
+    box-sizing: border-box;
+    background-color: #fff;
+}

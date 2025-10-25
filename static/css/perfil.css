@@ -1,0 +1,149 @@
+/* --- Tema geral --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top, #111, #050505);
+    color: #eee;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Efeito de vidro --- */
+.glass {
+    background: rgba(30, 30, 30, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Cabeçalho --- */
+.perfil-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    margin: 20px;
+}
+
+.perfil-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--cor-primaria);
+}
+
+/* --- Menu --- */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+/* --- Container do perfil --- */
+.perfil-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.perfil-container h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #1a1a1a;
+    color: #eee;
+    transition: 0.3s;
+}
+
+input:focus, select:focus {
+    box-shadow: 0 0 6px var(--cor-primaria);
+}
+
+.btn {
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+    background-color: var(--cor-secundaria);
+}
+
+.sucesso {
+    color: #8cff8c;
+    text-align: center;
+    font-weight: bold;
+}
+
+.erro {
+    color: #ff8c8c;
+    text-align: center;
+}
+
+/* --- Rodapé --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+}
+
+/* --- Temas --- */
+.tema-vermelho {
+    --cor-primaria: #ff4444;
+    --cor-secundaria: #ff6666;
+}
+
+.tema-azul {
+    --cor-primaria: #448aff;
+    --cor-secundaria: #77aaff;
+}
+
+.tema-verde {
+    --cor-primaria: #44ff88;
+    --cor-secundaria: #66ffaa;
+}
+
+.tema-rosa {
+    --cor-primaria: #ff44e6;
+    --cor-secundaria: #ff66d9;
+}

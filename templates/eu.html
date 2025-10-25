@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário - Yestochi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Secreto</h1>
+        <a href="{{ url_for('home') }}">Sair</a>
+    </header>
+
+    <main>
+        <!-- Formulário para adicionar anotação -->
+        <form method="POST" action="{{ url_for('salvar_anotacoes') }}">
+            <textarea name="anotacao" placeholder="Escreva seus pensamentos aqui..." required></textarea>
+            <button type="submit">Salvar</button>
+        </form>
+
+        <!-- Exibe as anotações existentes -->
+        <div id="anotacoes">
+            {% if perfil.anotacoes %}
+                {% for nota in perfil.anotacoes %}
+                    <div class="balao">{{ nota }}</div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </main>
+</body>
+</html>

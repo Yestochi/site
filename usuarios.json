@@ -1,0 +1,18 @@
+{
+    "admin": {
+        "senha": "admin",
+        "tema": "vermelho",
+        "avatar": "admin_1761380370_download__13_-removebg-preview.png",
+        "anotacoes": []
+    },
+    "yestochi": {
+        "senha": "1234",
+        "tema": "vermelho",
+        "avatar": null
+    },
+    "juia": {
+        "senha": "juia",
+        "tema": "rosa",
+        "avatar": "juia_1761369793_WhatsApp_Image_2025-09-02_at_20.08.00.jpeg"
+    }
+}

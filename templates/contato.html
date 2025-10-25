@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Yestochi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body class="tema-{{ perfil.tema }}">
+<header>
+    <h1 class="site-title">Yestochi</h1>
+
+    <div class="header-content">
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Início</a></li>
+                <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+                <li><a href="{{ url_for('servicos') }}">Serviços</a></li>
+                <li><a href="{{ url_for('perfil') }}">Perfil</a></li>
+                <li><a href="{{ url_for('logout') }}">Sair</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-user">
+    {% if not pagina_perfil %}
+        <a href="{{ url_for('perfil') }}" class="header-user-link">
+            <div class="header-user">
+                {% if perfil.avatar %}
+                    <img src="{{ url_for('static', filename='uploads/' + perfil.avatar) }}" alt="Avatar" class="header-avatar">
+                {% else %}
+                    <img src="{{ url_for('static', filename='uploads/default.png') }}" alt="Avatar" class="header-avatar">
+                {% endif %}
+                <span class="username">{{ usuario }}</span>
+            </div>
+        </a>
+        {% endif %}
+        <!-- 👆 fim do bloco -->
+        </div>
+    </div>
+</header>
+
+
+    <main>
+        <h2>Entre em contato</h2>
+        <p>Email: <strong>tropadosraul07@gmail.com</strong><br>Instagram: <strong>@yestochi_</strong></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Feito por Yuri</p>
+    </footer>
+</body>
+</html>

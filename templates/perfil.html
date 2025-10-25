@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Yestochi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/perfil.css') }}">
+</head>
+<body class="tema-{{ tema }}">
+    <header class="perfil-header glass">
+        <div class="perfil-info">
+            {% if perfil.avatar %}
+                <img class="avatar" src="{{ url_for('static', filename='uploads/' + perfil.avatar) }}" alt="Avatar">
+            {% else %}
+                <img class="avatar" src="{{ url_for('static', filename='uploads/default.png') }}" alt="Avatar">
+            {% endif %}
+            <h1>{{ usuario }}</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Início</a></li>
+                <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+                <li><a href="{{ url_for('servicos') }}">Serviços</a></li>
+                <li><a href="{{ url_for('contato') }}">Contato</a></li>
+                <li><a href="{{ url_for('logout') }}">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="perfil-container glass">
+        {% if msg %}
+            <p class="sucesso">{{ msg }}</p>
+        {% endif %}
+        {% if erro %}
+            <p class="erro">{{ erro }}</p>
+        {% endif %}
+
+        <h2>Configurações</h2>
+
+        <form method="POST" enctype="multipart/form-data">
+            <label>Nova senha</label>
+            <input type="password" name="senha" placeholder="Digite uma nova senha">
+
+            <label>Tema do site</label>
+            <select name="tema">
+                <option value="vermelho" {% if tema == 'vermelho' %}selected{% endif %}>Vermelho</option>
+                <option value="azul" {% if tema == 'azul' %}selected{% endif %}>Azul</option>
+                <option value="verde" {% if tema == 'verde' %}selected{% endif %}>Verde</option>
+                <option value="rosa" {% if tema == 'rosa' %}selected{% endif %}>Rosa</option>
+            </select>
+
+            <label>Foto de perfil (avatar)</label>
+            <input type="file" name="avatar" accept="image/*">
+
+            <button type="submit" class="btn">Salvar alterações</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Feito por Yuri</p>
+    </footer>
+</body>
+</html>

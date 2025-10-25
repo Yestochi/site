@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yestochi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <style>
+        /* CSS para imagem menor e proporcional */
+        .conteudo-img {
+            max-width: 400px; /* tamanho máximo da imagem */
+            width: 100%;      /* responsivo */
+            height: auto;     /* mantém proporção */
+            display: block;
+            margin: 10px auto; /* centraliza a imagem com espaçamento */
+            border-radius: 8px; /* opcional, deixa arredondada */
+        }
+
+        a p {
+            text-align: center;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body class="tema-{{ perfil.tema }}">
+    <!-- Cabeçalho -->
+    <header>
+        <h1 class="site-title">Yestochi</h1>
+
+        <div class="header-content">
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+                    <li><a href="{{ url_for('servicos') }}">Serviços</a></li>
+                    <li><a href="{{ url_for('contato') }}">Contato</a></li>
+                    <li><a href="{{ url_for('perfil') }}">Perfil</a></li>
+                    <li><a href="{{ url_for('logout') }}">Sair</a></li>
+                </ul>
+            </nav>
+
+            {% if not pagina_perfil %}
+            <a href="{{ url_for('perfil') }}" class="header-user-link">
+                <div class="header-user">
+                    {% if perfil.avatar %}
+                        <img src="{{ url_for('static', filename='uploads/' + perfil.avatar) }}" alt="Avatar" class="header-avatar">
+                    {% else %}
+                        <img src="{{ url_for('static', filename='uploads/default.png') }}" alt="Avatar" class="header-avatar">
+                    {% endif %}
+                    <span class="username">{{ usuario }}</span>
+                </div>
+            </a>
+            {% endif %}
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <section>
+            <h2>Este é o primeiro site</h2>
+            <p>Vai ter novos conteúdos aqui, se prepara</p>
+
+            <a href="{{ url_for('eu') }}" class="link-imagem">
+                <img src="{{ url_for('static', filename='uploads/yst.jpeg') }}" class="conteudo-img" alt="Imagem Yestochi">
+            </a>
+            <p class="imagem-legenda">eu</p>
+
+            <h2>Sobre mim</h2>
+            <p>Me chamo Yuri Estochi</p>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 - Feito por Yestochi</p>
+    </footer>
+</body>
+</html>
